@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts'. function (Blueprint $table){
+        Schema::table('posts', function (Blueprint $table){
             $table->unsignedBigInteger('author')->change();
             $table->renameColumn('author','user_id');
         });
@@ -23,7 +23,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('posts'. function (Blueprint $table){
+        Schema::table('posts', function (Blueprint $table){
             $table->renameColumn('user_id','author');
             $table->string('author')->change();
         });
