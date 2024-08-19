@@ -45,7 +45,7 @@ class PostController extends Controller
 
 
 
-        $data ['author'] = Auth:: user()->name;
+        $data ['user_id'] = Auth:: user()->id;
         $data ['creation_date'] = Carbon::now();
         $newPost = Post::create($data);
 

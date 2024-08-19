@@ -10,7 +10,7 @@ Showing {{ $post->title }}
             @if ($post->category)
                 <h2 class="d-inline-block px-3 rounded" style='background:{{$post->category->color}}'> {{ $post->category->name }}</h2>
             @endif
-            <h3>{{ $post->author }}</h3>
+            <h3> Writen by <em>{{ $post->user->name }}</em></h3>
             <div class="image">
                 <img src="{{ $post->image_url }}" class="img-fluid" alt="img">
             </div>

@@ -21,7 +21,7 @@
                         <td>{{ $post->id }}</td>
                         <td>{{ ($post->category) ? $post->category->name: 'without category' }}</td>
                         <td>{{ $post->title }}</td>
-                        <td>{{ $post->author }}</td>
+                        <td> <em> {{ $post->user->name }} </em></td>
                         <td>{{ $post->creation_date}}</td>
                         <td>
                             <a href="{{route ('admin.posts.show',$post )}}" class="btn btn-primary btn-sm">Show</a>
